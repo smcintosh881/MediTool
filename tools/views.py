@@ -1,3 +1,7 @@
+from tools.models import Tool
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    tools = Tool.objects.all()
+    return render(request, 'tools/index.html', {'tools': tools})
