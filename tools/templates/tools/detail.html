@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ tool.name }}</title>
-</head>
-<body>
-<h1>{{ tool.name }}</h1>
-<p>{{ tool.description }}</p>
-<input type="checkbox" {% if tool.isAvailable %}checked{% endif %}>Available?</input>
-</body>
-</html>
+{% extends 'tools/base.html' %}
+{% block content %}
+    <div class="container">
+        <h1>{{ tool.name }}</h1>
+        <p>{{ tool.description }}</p>
+        {% if tool.isAvailable %}
+            <i class="fa fa-check-circle" aria-hidden="true"></i> Available
+        {% else %}
+            <i class="fa fa-times-circle" aria-hidden="true"></i> Not Available
+        {% endif %}
+    </div>
+{% endblock %}

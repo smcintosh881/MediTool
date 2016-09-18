@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>All Medical Equipment</title>
-</head>
-<body>
-<h1>Medical Equipment</h1>
-<ul>
-    {% for tool in tools %}
-        <li>{{ tool }}</li>
-    {% endfor %}
-</ul>
-</body>
-</html>
+{% extends 'tools/base.html' %}
+{% block content %}
+    <div class="container">
+        <h1>Medical Equipment</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><h3>Name</h3></div>
+                <div class="col-md-6"><h3>Description</h3></div>
+                <div class="col-md-2"><h3>Is Available?</h3></div>
+            </div>
+            {% for tool in tools %}
+                <div class="row">
+                    <a href="{% url 'detail' tool.id %}"><div class="col-md-4">{{ tool.name }}</div></a>
+                    <div class="col-md-6">{{ tool.description }}</div>
+                    <div class="col-md-2">
+                        {% if tool.isAvailable %}
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        {% else %}
+                            <i class="fa fa-times-circle" aria-hidden="true"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
