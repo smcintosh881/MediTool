@@ -1,6 +1,6 @@
 from tools.models import Tool
 from django.shortcuts import render, get_object_or_404
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from tools.models import Tool
 from tools.forms import ToolForm
 from django.http import HttpResponseRedirect
@@ -18,8 +18,13 @@ def detail(request, tool_id):
 class CreateTool(CreateView):
 
     model = Tool
-    # fields = ['name', 'description', is ]
     template_name = 'tools/tool_form.html'
 
     form_class = ToolForm
 
+class EditTool(UpdateView):
+    
+    model = Tool
+    template_name = 'tools/tool_form.html'
+
+    form_class = ToolForm

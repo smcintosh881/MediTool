@@ -8,5 +8,8 @@
         {% else %}
             <i class="fa fa-times-circle" aria-hidden="true"></i> Not Available
         {% endif %}
+        <div>
+          <a href="{% url 'edit' tool.id %}" class="btn btn-sm btn-warning">Edit</a>
+        </div>
     </div>
 {% endblock %}
