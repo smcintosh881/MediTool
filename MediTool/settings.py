@@ -115,8 +115,17 @@ USE_L10N = True
 
 USE_TZ = True
 
+# File upload handler
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.MemoryFileUploadHandler',
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/pic_folder/'
+MEDIA_ROOT = 'pic_folder/'
+

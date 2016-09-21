@@ -1,7 +1,7 @@
 {% extends 'tools/base.html' %}
 {% block content %}
 <div class="container">
-  <form action="" method="post">{% csrf_token %}
+  <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
       {{ form.as_p }}
       <input type="submit" value="Save" />
   </form>
