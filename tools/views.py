@@ -1,6 +1,6 @@
 from tools.models import Tool
 from django.shortcuts import render, get_object_or_404
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, __FILL_ME_IN__
 from tools.models import Tool
 from tools.forms import ToolForm
 from django.http import HttpResponseRedirect
@@ -22,9 +22,9 @@ class CreateTool(CreateView):
 
     form_class = ToolForm
 
-class EditTool(UpdateView):
+class EditTool(__FILL_ME_IN__):
     
     model = Tool
-    template_name = 'tools/tool_form.html'
+    template_name = 'tools/__FILL_ME_IN__.html'
 
-    form_class = ToolForm
+    form_class = __FILL_ME_IN__
