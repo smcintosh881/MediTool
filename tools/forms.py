@@ -8,5 +8,4 @@ class ToolForm(forms.ModelForm):
         name = forms.CharField()
         description = forms.CharField()
         isAvailable = forms.BooleanField()
-        model_pic = forms.ImageField()
-        fields = ['name', 'description', 'isAvailable', 'model_pic']
+        fields = ['name', 'description', 'isAvailable']
