@@ -9,16 +9,16 @@ Sample application for a Micro workshop
 
 #### Forms
 
-[CreateView](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#createview)
-[UpdateView/Example template](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#updateview)
-[Field Forms (Char Field, etc)](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#built-in-field-classes)
-[Model Form](https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/)
+- [CreateView](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#createview)
+- [UpdateView/Example template](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#updateview)
+- [Field Forms (Char Field, etc)](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#built-in-field-classes)
+- [Model Form](https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/)
 
 
 
 #### URLs
 
-[Regex](http://rubular.com/)
-[Named Groups](https://docs.djangoproject.com/en/1.10/topics/http/urls/#named-groups)
-[Update View specific tricks](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#updateview)
-[Django Templating Language](https://docs.djangoproject.com/en/1.10/topics/templates/#the-django-template-language)
+- [Regex](http://rubular.com/)
+- [Named Groups](https://docs.djangoproject.com/en/1.10/topics/http/urls/#named-groups)
+- [Update View specific tricks](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#updateview)
+- [Django Templating Language](https://docs.djangoproject.com/en/1.10/topics/templates/#the-django-template-language)
