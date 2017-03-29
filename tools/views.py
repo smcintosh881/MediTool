@@ -15,12 +15,9 @@ def detail(request, tool_id):
 
 def calendar(request):
     appointments = Appointment.objects.all()
-    for app in appointments:
-        start = app.startTime
-        end = app.endTime
-        app.startTime = start.strftime("%Y-%m-%dT%H:%M:%S")
-        app.endTime = end.strftime("%Y-%m-%dT%H:%M:%S")
-    return render(request, 'tools/calendar.html', {'Appointments': appointments})
+    # FILL_ME_IN_OPTIONAL having problems with the event showing up on the calendar? Try mapping Calendar fields
+    # with the matching appointment fields ie start appointment.startTime = appointment.startTime.strftime("%Y-%m-%dT%H:%M:%S")
+    return render(request, 'tools/FILL_ME_IN.html', {'Appointments': appointments})
 
 
 class CreateAppointment(CreateView):

@@ -15,7 +15,5 @@ class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
         patient = forms.ChoiceField()
-        notes = forms.CharField()
-        startTime = forms.DateField()
-        endTime = forms.DateField()
-        fields = ['patient', 'notes', 'startTime', 'endTime']
+        #FILL_ME_IN What do Appointments do?
+        fields = ['patient']

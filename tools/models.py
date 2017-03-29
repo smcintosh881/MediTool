@@ -11,10 +11,8 @@ class Patient(models.Model):
         return str(self.name)
 
 class Appointment(models.Model):
-    notes = models.CharField( max_length = 500,  default=None )
     patient = models.ForeignKey( 'Patient', default=None,  )
-    startTime = models.DateTimeField("Appointment Date (YYYY-MM-DD HH:MM)", null=True)
-    endTime = models.DateTimeField("Appointment Date (YYYY-MM-DD HH:MM)", null=True)
+    #FILL_ME_IN what variables do we need to create an appointment for Full Calendar
 
     def __str__(self):
         return str(self.name)
