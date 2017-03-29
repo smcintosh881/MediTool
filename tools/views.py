@@ -1,30 +1,47 @@
-from tools.models import Tool
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView
-from tools.models import Tool
-from tools.forms import ToolForm
-from django.http import HttpResponseRedirect
+from tools.models import Patient, Appointment
+from tools.forms import PatientForm, AppointmentForm
 
 def index(request):
-    tools = Tool.objects.all()
-    return render(request, 'tools/index.html', {'tools': tools})
+    patients = Patient.objects.all()
+    return render(request, 'tools/index.html', {'tools': patients})
 
 
 def detail(request, tool_id):
-    tool = get_object_or_404(Tool, pk=tool_id)
-    return render(request, 'tools/detail.html', {'tool': tool})
+    patient = get_object_or_404(Patient, pk=tool_id)
+    return render(request, 'tools/detail.html', {'tool': patient})
 
 
-class CreateTool(CreateView):
+def calendar(request):
+    appointments = Appointment.objects.all()
+    for app in appointments:
+        start = app.startTime
+        end = app.endTime
+        app.startTime = start.strftime("%Y-%m-%dT%H:%M:%S")
+        app.endTime = end.strftime("%Y-%m-%dT%H:%M:%S")
+    return render(request, 'tools/calendar.html', {'Appointments': appointments})
 
-    model = Tool
+
+class CreateAppointment(CreateView):
+
+    model = Appointment
+    template_name = 'tools/appointment_form.html'
+
+    form_class = AppointmentForm
+
+
+class CreatePatient(CreateView):
+
+    model = Patient
     template_name = 'tools/tool_form.html'
 
-    form_class = ToolForm
+    form_class = PatientForm
 
-class EditTool(UpdateView):
+
+class EditPatient(UpdateView):
     
-    model = Tool
+    model = Patient
     template_name = 'tools/tool_form.html'
 
-    form_class = ToolForm
+    form_class = PatientForm
