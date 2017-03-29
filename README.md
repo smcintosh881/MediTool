@@ -4,7 +4,7 @@ Sample application for a Micro workshop
 ## Slides
 
 [View Presentation Slides Here](https://docs.google.com/a/g.rit.edu/presentation/d/101b989oqQQT97c9D7FpRwTFyoSmtxG3NGuLKGPyrzk8/edit?usp=sharing)
-
+[View Frontend Slides Here] (https://docs.google.com/presentation/d/1gUn5J1RkY-0b6UEuhqgh6xvNv_YiD7b7mejRvSoEEsk/edit?usp=sharing)
 ## Helpful Links
 
 #### Forms
